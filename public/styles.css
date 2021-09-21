@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
+:root{
+  --pale-blue:hsl(225, 100%, 94%);
+  --bright-blue:hsl(245, 75%, 52%);
+  --very-pale-blue:hsl(225, 100%, 98%);
+  --desaturated-blue:hsl(224, 23%, 55%);
+  --dark-blue:hsl(223, 47%, 23%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,10 +25,12 @@ body {
   background-position: top 100px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: hsl(225, 100%, 94%);
+  background-color: var(--pale-blue);
   overflow: hidden;
 }
 /* Card Section */
+
+
 
 #card {
   background-color: #fff;
@@ -29,6 +39,7 @@ body {
   height: 770px;
   border-radius: 15px;
   text-align: center;
+  margin: 0 auto;
 }
 .image-container {
   background-image: url("/images/illustration-hero.svg");
@@ -44,20 +55,20 @@ body {
 }
 
 h3 {
-  color: hsl(223, 47%, 23%);
+  color: var(--dark-blue);
   font-weight: 900;
   font-size: 1.8rem;
   margin: 40px 0 30px 0;
 }
 .title-p {
   font-size: 1.1rem;
-  color: hsl(224, 23%, 55%);
+  color: var(--desaturated-blue);
   width: 70%;
   margin: 0 auto;
   line-height: 1.7;
 }
 .plan-container {
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--very-pale-blue);
   margin: 25px auto;
   display: flex;
   align-items: center;
@@ -83,11 +94,11 @@ h3 {
   margin: 3px 0;
 }
 .price-p {
-  color: hsl(224, 23%, 55%);
+  color: var(--desaturated-blue);
   margin: 3px 0;
 }
 .change-text {
-  color: hsl(245, 75%, 52%);
+  color: var(--bright-blue);
   font: size 1.05rem;
   font-weight: 700;
 }
@@ -102,18 +113,30 @@ h3 {
   font-weight: 900;
   font-size: 1rem;
   cursor: pointer;
+  border: transparent;
+  border-radius: 10px;
 }
 
 .proceed-btn {
   color: #fff;
-  background-color: hsl(245, 75%, 52%);
-  border: transparent;
-  border-radius: 10px;
-  box-shadow: 3px 6px 15px hsl(225, 100%, 94%);
+  background-color: var(--bright-blue);
+
+  box-shadow: 3px 6px 15px var(--pale-blue);
 }
+
+.proceed-btn:active{
+background-color: hsl(245, 75%,60%);
+}
+
+.cancel-btn:active{
+  color:var(--dark-blue);
+  background-color:hsla(228, 100%, 98%, 0.432);
+  box-shadow:3px 6px 15px hsla(228, 100%, 98%, 0.732);
+}
+
 .cancel-btn{
     border:none;
-    color:hsl(224, 23%, 55%);
+    color:var(--desaturated-blue);
     background-color: transparent;
 }
 
